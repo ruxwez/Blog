@@ -1,0 +1,62 @@
+# If your site is in 'https', then make sure your base url isn't written using 'http' otherwise your sitemap would
+# contain http (as opposeed to https) URLs. This would affect Google indexing of your URLs.
+baseURL: "/"
+title: Ruxwez Blog
+theme:
+  - github.com/adityatelange/hugo-PaperMod
+
+enableInlineShortcodes: true
+enableRobotsTXT: true
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+enableEmoji: true
+pygmentsUseClasses: true
+mainsections: ["posts"]
+googleAnalytics: G-Q1933QFDNH
+
+minify:
+  disableXML: true
+  # minifyOutput: true
+
+languages:
+  en:
+    languageName: "English"
+    weight: 1
+    taxonomies:
+      category: categories
+      tag: tags
+      series: series
+    menu:
+      main:
+        - name: Portfolio
+          url: https://ruxwez.dev
+          weight: 1
+
+outputs:
+  home:
+    - HTML
+
+params:
+  env: production # to enable google analytics, opengraph, twitter-cards and schema.
+  author: Ruxwez
+  # author: ["Me", "You"] # multiple authors
+
+  defaultTheme: dark
+  ShowShareButtons: true
+  displayFullLangName: true
+  ShowCodeCopyButtons: true
+  ShowRssButtonInSectionTermList: false
+  ShowAllPagesInArchive: true
+  ShowPageNums: true
+  images: ["images/papermod-cover.png"]
+
+  assets:
+    disableHLJS: true
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+  highlight:
+    noClasses: false
